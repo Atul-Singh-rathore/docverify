@@ -1,0 +1,18 @@
+# DocuVerify: Technology Stack & Component Contributions
+
+## 1. Frontend & User Interface
+* **Technology:** Streamlit (Python)
+* **Contribution:** Provides a rapid, interactive web-based UI with built-in file upload widgets, progress indicators, and dynamic data display without requiring a complex JavaScript/React build setup.
+
+## 2. Image Processing & Computer Vision
+* **Technology:** OpenCV (`cv2`) & NumPy
+* **Contribution:** Handles image preprocessing tasks such as grayscale conversion, noise removal, skew/tilt correction, and thresholding to ensure clean document inputs for the AI model.
+
+## 3. AI Model & Text Extraction
+* **Technology:** PyTorch & Hugging Face Transformers (LayoutLMv3)
+* **Contribution:** Combines visual layout features with text extraction to accurately read structured fields (names, dates, IDs, and seals) from official documents and detect signs of tampering or forgery.
+
+## 4. Database & Audit Logging
+* **Technology:** PostgreSQL
+* **Contribution:** Acts as a reliable relational database to securely store metadata, verification logs, confidence scores, and historical audit trails for every processed document.
+

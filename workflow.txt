@@ -1,0 +1,23 @@
+# DocuVerify Workflow
+
+## End-to-End System Workflow
+
+1. **Document Upload:**
+   * The user accesses the web interface and uploads an official document (such as a compliance certificate, identity card, or academic record) in image or PDF format.
+
+2. **Cloud Storage (AWS S3):**
+   * The uploaded raw document is directly sent and stored securely in an Amazon S3 bucket, generating a persistent cloud URL for the audit trail.
+
+3. **Image Preprocessing (OpenCV):**
+   * The backend fetches the image and passes it through OpenCV and NumPy pipelines to clean the document (correcting skews/tilts, removing background noise, and enhancing resolution).
+
+4. **AI Extraction & Analysis (LayoutLMv3):**
+   * The preprocessed document is processed by the Hugging Face LayoutLMv3 model and PyTorch. 
+   * The AI simultaneously analyzes the visual layout and extracts key text fields (such as names, ID numbers, dates, and official seals).
+
+5. **Validation & Logging (PostgreSQL ):**
+   * The extracted data is validated against rule-based criteria or database templates to check for signs of forgery or tampering.
+   * The final verification status (Authentic / Flagged), confidence score, and metadata are automatically logged into the PostgreSQL database hosted on AWS RDS.
+
+6. **Result Display:**
+   * The final verification result and extracted details are sent back to the frontend to be displayed instantly to the user.

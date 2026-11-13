@@ -1,0 +1,26 @@
+# DocuVerify: System Architecture
+
+## Architectural Overview
+The DocuVerify system follows a modular, client-server architecture designed for efficient document authentication and processing. Since the project uses **Streamlit** for the frontend, the application can run smoothly in a streamlined Python-based runtime environment.
+
+## End-to-End Architecture Flow
+
+1. **Presentation Layer (Frontend):**
+   * Built using **Streamlit**.
+   * Provides an interactive browser-based UI where users can drag-and-drop document files (images/PDFs) and view verification results instantly.
+
+2. **Application & Processing Layer (Backend):**
+   * **OpenCV Preprocessing Module:** Receives the uploaded image, normalizes dimensions, corrects rotation skews, and removes background artifacts.
+   * **LayoutLMv3 AI Pipeline:** Powered by PyTorch and Hugging Face. Analyzes both textual content and spatial layout coordinates simultaneously to extract key entities.
+
+3. **Data & Persistence Layer:**
+   * **PostgreSQL Database:** Stores transactional logs, audit trails, verification statuses (Authentic / Flagged), timestamps, and extracted metadata fields for compliance tracking.
+
+
+[Streamlit Frontend (UI & Tabs)]
+               │
+               ▼
+[OpenCV & Tesseract-OCR + LayoutLMv3 (Local AI Pipeline)]
+               │
+               ▼
+[Local PostgreSQL Database & Local CSV/Folders (Storage)]  
