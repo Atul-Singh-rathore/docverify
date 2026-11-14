@@ -1,0 +1,24 @@
+# ─── Core ────────────────────────────────────────────────
+streamlit>=1.33.0
+pandas>=2.0.0
+
+# ─── Image Processing ────────────────────────────────────
+opencv-python>=4.8.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# ─── OCR ─────────────────────────────────────────────────
+pytesseract>=0.3.10
+
+# ─── PDF Support ─────────────────────────────────────────
+pdf2image>=1.16.3        # Requires Poppler installed separately
+
+# ─── AI / ML (LayoutLMv3 — optional, heavy) ──────────────
+torch>=2.0.0
+transformers>=4.35.0
+
+# ─── Database ────────────────────────────────────────────
+psycopg2-binary>=2.9.0
+
+# ─── AWS S3 (optional — only needed if S3 upload enabled) ─
+boto3>=1.28.0
