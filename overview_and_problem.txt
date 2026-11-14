@@ -1,0 +1,9 @@
+#  DocuVerify (Document Authentication & Regulatory Compliance System)
+
+## What is DocuVerify?
+It is an intelligent web application designed to automatically verify official documents such as compliance certificates, identity cards, and academic records to check whether they are authentic or tampered with.
+
+## Problems It Solves
+* **Automated Verification:** It is an intelligent web application designed to automatically verify documents such as compliance certificates and identity cards.
+* **Document Fraud:** Stops people from using fake, edited, or forged official papers.
+* **Slow Manual Checks:** Eliminates tedious manual inspections of seals, signatures, and layouts, saving hours of manual work.
